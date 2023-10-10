@@ -1,0 +1,121 @@
+﻿namespace = muhammad_alis_reform_events
+
+muhammad_alis_reform_events.1 = { # THE AGE OF REFORM
+	type = country_event
+	placement = root
+
+	title = muhammad_alis_reform_events.1.t
+	desc = muhammad_alis_reform_events.1.d
+	flavor = muhammad_alis_reform_events.1.f
+
+	event_image = {
+		video = "europenorthamerica_london_center"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 1
+
+	trigger = {
+		#triggered by history
+	}
+
+	immediate = {
+		set_variable = {
+			name = egypt_reform_var
+			value = 0
+		}
+		add_journal_entry = {
+			type = je_muhammad_alis_reforms
+		}
+	}
+
+	option = {
+		name = muhammad_alis_reform_events.1.a		
+		add_journal_entry = {
+			type = je_muhammad_alis_trade
+		}
+		add_journal_entry = {
+			type = je_muhammad_alis_tax_farms
+		}
+		add_journal_entry = {
+			type = je_muhammad_alis_corvee
+		}
+		add_journal_entry = {
+			type = je_muhammad_alis_medics
+		}
+		add_journal_entry = {
+			type = je_muhammad_alis_nahda
+		}
+	}
+}
+
+
+
+muhammad_alis_reform_events.5 = { # SUCCESS - MODERN EGYPT
+	type = country_event
+	placement = root
+
+	title = muhammad_alis_reform_events.5.t
+	desc = muhammad_alis_reform_events.5.d
+	flavor = muhammad_alis_reform_events.5.f
+
+	event_image = {
+		video = "europenorthamerica_london_center"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 1
+
+	trigger = {
+		#triggered by je
+	}
+	immediate = {
+		add_modifier = {
+			name = modern_egypt
+		}
+	}
+	option = {
+		name = muhammad_alis_reform_events.5.a
+		show_as_tooltip = {
+			add_modifier = {
+				name = modern_egypt
+			}
+		}
+	}
+}
+
+muhammad_alis_reform_events.6 = { # FAILURE - BACKWARDS EGYPT
+	type = country_event
+	placement = root
+
+	title = muhammad_alis_reform_events.6.t
+	desc = muhammad_alis_reform_events.6.d
+	flavor = muhammad_alis_reform_events.6.f
+
+	event_image = {
+		video = "europenorthamerica_london_center"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 1
+
+	trigger = {
+		#triggered by je
+	}
+	immediate = {
+		add_modifier = {
+			name = backwards_egypt
+		}
+	}
+	option = {
+		name = muhammad_alis_reform_events.6.a
+		show_as_tooltip = {
+			add_modifier = {
+				name = backwards_egypt
+			}
+		}
+	}
+}

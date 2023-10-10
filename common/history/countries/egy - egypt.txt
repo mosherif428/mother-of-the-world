@@ -1,0 +1,67 @@
+﻿COUNTRIES = {
+	c:EGY = {
+		effect_starting_technology_tier_3_tech = yes
+		effect_starting_politics_traditional = yes
+		add_technology_researched = napoleonic_warfare
+		
+		add_taxed_goods = g:tobacco
+		add_taxed_goods = g:coffee
+		add_taxed_goods = g:luxury_furniture
+
+		set_tariffs_import_priority = g:iron
+		
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_autocracy 
+		activate_law = law_type:law_freedom_of_conscience
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_racial_segregation
+		activate_law = law_type:law_agrarianism
+		activate_law = law_type:law_free_trade # REFORM TO PROTECTIONISM
+		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_slave_trade
+		activate_law = law_type:law_no_workers_rights # REFORM TO CORVEE
+		activate_law = law_type:law_serfdom # REFORM TO TENANT FARMERS
+
+		ig:ig_armed_forces = {
+			add_ruling_interest_group = yes
+		}
+		trigger_event = { 
+			id = motw_meta_events.1 
+			days = 0 
+			popup = yes 
+		}
+		trigger_event = {
+			id = muhammad_alis_reform_events.1
+			days = 7
+			popup = yes
+		}
+		trigger_event = {
+			id = motw_intro_events.2 # SUBLIME ENVY FOR THE SUBLIME PORT
+			days = 30
+			popup = yes
+		}
+		trigger_event = {
+			id = motw_intro_events.1 # GHOSTS OF THE MAMLUKS
+			days = 60
+			popup = yes
+		}
+		trigger_event = {
+			id = motw_intro_events.4 # THE HIGHER POWERS
+			days = 90
+			popup = yes
+		}
+		trigger_event = {
+			id = oriental_crisis.1 # MEMORIES OF KUTAHYA - KICKSTARTS THE ORIENTAL CRISIS EVENT CHAIN
+			days = 1156
+			popup = yes
+		}
+		if = {
+			limit = { NOT = { has_variable = motw_war_lose } }
+			trigger_event = {
+				id = 1848_reckoning.1
+				days = 2970 # 1844.2.18
+				popup = yes
+			}
+		}
+	}
+}

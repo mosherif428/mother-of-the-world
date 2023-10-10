@@ -1,0 +1,139 @@
+﻿# Egypt - EGY
+egy_muhammad_ali_template = {
+    # Muhammad Ali
+    first_name = "Muhammad_Ali"
+    last_name = al-_Alawi
+    historical = yes
+    ruler = yes
+	noble = yes
+    culture = cu:albanian
+    birth_date = 1769.3.4
+    dna = dna_muhammad_ali
+    interest_group = ig_armed_forces
+    ideology = ideology_jingoist_leader
+    traits = {
+        ambitious
+        persistent
+        innovative
+    }
+}
+egy_ibrahim_alawi_template = {
+    # Ibrahim Pasha of Egypt
+    first_name = Ibrahim
+    last_name = al-_Alawi
+    historical = yes
+    heir = yes
+	noble = yes
+    culture = cu:albanian
+    is_general = yes
+    age = 47
+    dna = dna_ibrahim_pasha
+    interest_group = ig_armed_forces
+    ideology = ideology_jingoist_leader
+    hq = region_nile_basin
+    commander_rank = commander_rank_3
+    traits = {
+        persistent
+        experienced_offensive_planner
+        pillager
+    }
+}
+egy_abbas_helmy_template = {
+	#Abbas Helmy Pasha of Egypt
+	first_name = Abbas_Helmy
+	last_name = al-_Alawi
+	historical = yes
+	heir = yes
+	noble = yes
+	culture = cu:misri
+	is_general = yes
+	birth_date = 1812.7.1
+	dna = dna_abbas_helmy
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+	commander_rank = commander_rank_1
+	traits = {
+		bigoted
+		direct
+		imposing
+	}
+}
+egy_said_alawi_template = {
+	#Said Pasha of Egypt
+	first_name = Said
+	last_name = al-_Alawi
+	historical = yes
+	heir = yes
+	noble = yes
+	culture = cu:albanian
+	is_general = yes
+	birth_date = 1854.7.13
+	ideology = ideology_luddite
+	commander_rank = commander_rank_1
+	traits = {
+		hedonist
+		romantic
+	}
+
+}
+egy_ismail_alawi_template = {
+	#Ismail Pasha of Egypt
+	first_name = Ismail
+	last_name = al-_Alawi
+	historical = yes
+	noble = yes
+	heir = yes
+	culture = cu:misri
+	is_general = yes
+	birth_date = 1830.1.12
+	interest_group = ig_landowners
+	ideology = ideology_royalist
+	commander_rank = commander_rank_1
+	traits = {
+		reckless
+		hedonist
+	}
+}
+egy_tewfiq_alawi_template = {
+	#Mohamed Tewfiq Pasha of Egypt
+	first_name = Muhammad_Tewfiq
+	last_name = Al-_Alawi
+	historical = yes
+	noble = yes
+	heir = yes
+	culture = cu:misri
+
+}
+
+# Transvaal - TRN
+TRN_paul_kruger_template = { # Paul Kruger
+    first_name = Paul
+    last_name = Kruger
+    historical = yes
+    culture = cu:boer
+    female = no
+    religion = protestant
+    ideology = ideology_traditionalist
+    interest_group = ig_rural_folk
+    birth_date = 1825.10.10
+    traits = {
+        pious
+    }   
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:TRN
+            this = c:TRN
+        }
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+                is_interest_group_type = ig_rural_folk
+                is_interest_group_type = ig_landowners
+                is_interest_group_type = ig_petty_bourgeoisie
+            }
+        }
+        earliest_usage_date = 1852.1.1
+        latest_usage_date = 1899.1.1
+        chance = 50
+    }   
+}

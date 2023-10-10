@@ -1,0 +1,75 @@
+﻿namespace = motw_meta_events
+
+motw_meta_events.1 = {
+	type = country_event
+	placement = root
+
+	title = motw_meta_events.1.t
+	desc = motw_meta_events.1.d
+	flavor = motw_meta_events.1.f
+
+	event_image = {
+		texture = ""
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	duration = 1
+
+	trigger = {
+		OR = {
+			c:EGY ?= ROOT
+		}
+		NOR = {
+			has_global_variable = strictly_historical_motw
+			has_global_variable = historical_motw
+			has_global_variable = loosely_historical_motw
+		}
+	}
+	immediate = {
+		ruler = {
+			add_modifier = {
+				name = plot_armor
+				months = 144
+			}
+		}
+		heir = {
+			add_modifier = {
+				name = plot_armor
+				months = 144
+			}
+		}
+
+	}
+	option = {
+		name = motw_meta_events.1.a
+		custom_tooltip = strictly_historical_tooltip
+		default_option = yes
+		hidden_effect = {
+			set_global_variable = {
+				name = strictly_historical_motw
+			}
+		}
+	}
+	option = {
+		name = motw_meta_events.1.b
+		custom_tooltip = historical_tooltip
+		hidden_effect = {
+			set_global_variable = {
+				name = historical_motw
+			}
+		}
+	}
+	option = {
+		name = motw_meta_events.1.c
+		custom_tooltip = loosely_historical_tooltip
+		hidden_effect = {
+			set_global_variable = {
+				name = loosely_historical_motw
+			}
+		}
+	}
+	
+}	

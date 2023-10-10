@@ -1,0 +1,13 @@
+﻿on_monthly_pulse_country = {
+	on_actions = {
+		on_monthly_war_egypt
+		delay = { days = 0 }
+	}
+}
+on_monthly_war_egypt = {
+	first_valid = {
+		oriental_crisis.8
+		oriental_crisis.10
+		oriental_crisis.12
+	}
+}

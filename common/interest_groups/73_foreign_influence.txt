@@ -1,0 +1,346 @@
+﻿ig_foreign_influence = {
+	color = hsv{ 0.0 0.94 0.93 }
+	texture = "gfx/interface/icons/ig_icons/foreign_influence.dds"
+	layer = "revolution_dynamic_landowners"
+	index = 10
+
+	ideologies = {
+		ideology_paternalistic
+		ideology_stratocratic
+		ideology_patriarchal
+	}
+
+	enable = {
+		#AND = {
+			c:EGY ?= this
+		#	has_variable = foreign_influence_enabled
+		#}
+	}
+
+	# Deprecated; use on_enable effect to assign traits instead
+	traits = {
+		
+	}
+
+	on_enable = {
+		ig:ig_foreign_influence = {
+			set_ig_trait = ig_trait:ig_trait_tolerant_overlords
+			set_ig_trait = ig_trait:ig_trait_lenient_officers
+			set_ig_trait = ig_trait:ig_trait_iron_fist
+		}
+		
+		# British Influence
+		if = {
+			limit = {
+				country_has_primary_culture = cu:misri
+				has_variable = british_influence
+			}
+			ig:ig_foreign_influence = {
+				set_interest_group_name = ig_british_influence
+			}
+		}
+		else_if = {
+			limit = {
+				country_has_primary_culture = cu:misri
+				has_variable = french_influence
+			}
+			ig:ig_foreign_influence = {
+				set_interest_group_name = ig_french_influence
+			}
+		}
+		
+	}
+	on_disable = {}
+	on_character_ig_membership = {}
+
+	pop_potential = {
+		OR = {
+			is_pop_type = aristocrats
+			is_pop_type = clergymen
+			is_pop_type = officers
+			is_pop_type = farmers
+		}
+	}
+
+	pop_weight = {
+		value = 0
+
+		add = {
+			desc = "POP_ARISTOCRATS"
+			if = {
+				limit = {
+					is_pop_type = aristocrats
+					NOT = {
+						this.culture = {
+							is_primary_culture_of = ROOT
+							culture_is_discriminated_in = ROOT
+						}
+					}
+				}
+				value = 250
+			}
+		}
+
+		#add = {
+		#	desc = "POP_CLERGYMEN"
+		#	if = {
+		#		limit = {
+		#			is_pop_type = clergymen
+		#		}
+		#		value = 50
+		#	}
+		#}
+
+		add = {
+			desc = "POP_OFFICERS"
+			if = {
+				limit = {
+					is_pop_type = officers
+					NOT = {
+						this.culture = {
+							is_primary_culture_of = ROOT
+							culture_is_discriminated_in = ROOT
+						}
+					}
+				}
+				value = 50
+			}
+		}
+
+		multiply = {
+			desc = "LEADER_POPULARITY"
+			scope:interest_group = {
+				leader ?= {
+					value = popularity
+					multiply = 0.0025
+					add = 1
+					max = 1.25
+					min = 0.75
+				}
+			}
+		}
+		if = {
+			limit = {
+				scope:interest_group = {
+					is_in_government = yes
+				}
+			}
+			multiply = {
+				desc = "IN_GOVERNMENT_ATTRACTION"
+				value = 1
+				add = scope:interest_group.modifier:interest_group_in_government_attraction_mult
+				min = 0
+			}
+		}
+	}
+
+	monarch_weight = {
+		value = 2.0 # inherently likely
+		# Monarch is more or less likely to adopt foreign influence based on his ideology
+		if = {
+			limit = {
+				owner = { ruler = { has_ideology = ideology:ideology_traditionalist } }
+			}
+			add = 0.2
+		}
+		if = {
+			limit = {
+				owner = { ruler = { has_ideology = ideology:ideology_moderate } }
+			}
+			add = 0.1
+		}
+		if = {
+			limit = {
+				owner = { ruler = { has_ideology = ideology:ideology_royalist } }
+			}
+			add = 0.5
+		}
+		if = {
+			limit = {
+				owner = { ruler = { has_ideology = ideology:ideology_authoritarian } }
+			}
+			add = 0.3
+		}
+		if = {
+			limit = {
+				owner = { ruler = { has_ideology = ideology:ideology_traditionalist } }
+			}
+			add = 0.1
+		}
+		if = {
+			limit = {
+				owner = { ruler = { has_ideology = ideology:ideology_radical } }
+			}
+			multiply = 0.1
+		}
+		if = {
+			limit = {
+				owner = { ruler = { has_ideology = ideology:ideology_communist } }
+			}
+			multiply = 0.1
+		}
+		if = {
+			limit = {
+				owner = { ruler = { has_ideology = ideology:ideology_vanguardist } }
+			}
+			multiply = 0.1
+		}
+		if = {
+			limit = {
+				owner = { ruler = { has_ideology = ideology:ideology_anarchist } }
+			}
+			multiply = 0.1
+		}
+		if = {
+			limit = {
+				owner = { ruler = { has_ideology = ideology:ideology_ethno_nationalist } }
+			}
+			multiply = 0.1
+		}
+		if = {
+			limit = {
+				owner = { ruler = { has_ideology = ideology:ideology_republican_leader } }
+			}
+			multiply = 0.1
+		}
+
+		# Monarch is not likely to adopt a marginal IG
+		#if = {
+		#	limit = {
+		#		is_marginal = yes
+		#	}
+		#	multiply = {
+		#		value = 0.1
+		#	}
+		#}
+		# Monarch is more likely to adopt a Powerful IG
+		#if = {
+		#	limit = {
+		#		is_powerful = yes
+		#	}
+		#	multiply = {
+		#		value = 2
+		#	}
+		#}
+		# More likely with Serfdom or Slavery
+		#if = {
+		#	limit = {
+		#		owner = {
+		#			OR = {
+		#				has_law = law_type:law_serfdom
+		#				has_law = law_type:law_slave_trade
+		#				has_law = law_type:law_legacy_slavery
+		#			}
+		#		}
+		#	}
+		#	multiply = {
+		#		value = 2
+		#	}
+		#}
+		# More likely with Autocracy, Oligarchy, or Landed Voting
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						has_law = law_type:law_oligarchy
+						has_law = law_type:law_autocracy
+						has_law = law_type:law_landed_voting
+					}
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
+	}
+
+	agitator_weight = {
+		# No Foreign Influence Agitators
+		value = 0.0
+		
+	}
+
+	commander_weight = {
+		value = 2.0
+	}
+
+	noble_chance = {
+		value = 1.0
+	}
+
+	female_commander_chance = {
+		value = 0.0
+	}
+
+	female_politician_chance = {
+		value = 0.0
+
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_womens_suffrage
+				}
+			}
+
+			add = {
+				value = 0.01
+			}
+		}
+	}
+
+	female_agitator_chance = {
+		value = 0.01
+		
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_women_own_property
+				}
+
+			}
+			add = {
+				value = 0.01
+			}
+		}	
+		
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_women_in_the_workplace
+				}
+
+			}
+			add = {
+				value = 0.01
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_womens_suffrage
+				}
+
+			}
+			add = {
+				value = 0.01
+			}
+		}		
+	}
+
+	# The chance that a commander belonging to this IG takes over leadership when it changes
+	# scope:character is the most popular commander in the IG
+	commander_leader_chance = {
+		value = 0.5
+		if = {
+			limit = {
+				exists = scope:character
+			}
+			multiply = {
+				value = 1
+				add = scope:character.popularity
+				min = 0
+			}
+		}
+	}
+}

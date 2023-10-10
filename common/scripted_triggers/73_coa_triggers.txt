@@ -1,0 +1,8 @@
+﻿coa_coptic_trigger = {
+	c:EGY ?= this
+	country_has_state_religion = rel:oriental_orthodox
+}
+coa_def_coptic_flag_trigger = {
+	exists = scope:actor 
+	scope:actor = { coa_coptic_trigger = yes }
+}

@@ -1,0 +1,53 @@
+﻿gov_khedive = {
+	transfer_of_power = hereditary
+	
+	male_ruler = "RULER_TITLE_KHEDIVE"
+	female_ruler = "" # Empty on purpose
+
+	male_heir = "RULER_TITLE_PRINCE"
+	female_heir = "" # Empty on purpose
+	
+	possible = {
+		has_law = law_type:law_monarchy
+		exists = c:EGY
+		exists = global_var:khedive_recognized
+		c:EGY = ROOT
+	}
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}
+
+
+gov_vilayet = {								
+	transfer_of_power = hereditary
+	
+	male_ruler = "RULER_TITLE_VALI"			# Governor. This post would usually be appointed by the Ottoman Sultan, and not be hereditary. 
+	female_ruler = "" # Empty on purpose
+
+	male_heir = "RULER_TITLE_PRINCE"	# Governor of a Vilayet's subunit, the Sanjak, who would assume command in the Vali's absence
+	female_heir = "" # Empty on purpose
+	
+	possible = {
+		has_law = law_type:law_monarchy
+		exists = c:TRI
+		exists = c:TUR
+		OR = {
+			c:TRI = ROOT
+			c:EGY = ROOT
+		}
+		is_subject_of = c:TUR		
+		NOT = { exists = global_var:khedive_recognized }
+	}		
+
+	on_government_type_change = {
+		change_to_hereditary = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_hereditary = yes
+	}
+}

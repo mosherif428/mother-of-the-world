@@ -1,0 +1,59 @@
+﻿the_citadel_massacre = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	country_infamy_decay_mult = -0.05
+	character_popularity_add = -5
+}
+abandoned_cruel_ways = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_infamy_decay_mult = 0.10
+}
+eyes_on_the_imperial_seat = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_max_declared_interests_add = 1
+}
+prefers_national_reform = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_law_enactment_time_mult = -0.10
+	country_tech_research_speed_mult = 0.15
+}
+preferred_egypt = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 5
+}
+preparing_for_war = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	battle_army_offense = 0.5
+	battle_army_average_kill_rate = 0.2
+	battle_average_provinces_captured = 0.2
+}
+defected_ottoman_fleet = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	state_building_naval_base_max_level_add = 15
+}
+treacherous_fleet = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+	state_building_naval_base_max_level_add = -50
+}
+plot_armor = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_portrait_positive.dds
+	character_health_add = 10000
+}
+unstable_rule = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_portrait_negative.dds
+	country_authority_add = -100
+	country_legitimacy_headofstate_add = -10
+}
+modern_egypt = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 30
+	country_weekly_innovation_mult = 2.0
+	country_tech_research_speed_mult = 1.0
+	country_production_tech_research_speed_mult = 0.5
+}
+backwards_egypt = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	country_prestige_add = -50
+	country_weekly_innovation_mult = -0.25
+	country_tech_spread_mult = -0.05
+	country_production_tech_research_speed_mult = -0.25
+}

@@ -1,0 +1,241 @@
+﻿je_muhammad_alis_reforms = {
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	complete = {
+		scope:journal_entry = {
+			is_goal_complete = yes
+		}
+	}
+
+	on_complete ={
+		set_variable = {
+			name = muhammad_alis_reforms_complete
+		}
+		trigger_event = {
+			id = muhammad_alis_reform_events.5
+		}
+	}
+
+	timeout = 4400
+	on_timeout = {
+		add_modifier = {
+			name = backwards_egypt
+		}
+		set_variable = {
+			name = muhammad_alis_reforms_complete
+		}
+		trigger_event = {
+			id = muhammad_alis_reform_events.6
+		}
+	}
+
+	current_value = {
+		value = var:egypt_reform_var
+	}
+
+	goal_add_value = {
+		add = 4
+	}
+	fail = {
+		ruler = {
+			NOT = { has_culture = cu:albanian }
+		}
+	}
+	progressbar = yes
+
+	weight = 10000
+	should_be_pinned_by_default = yes
+}
+
+je_muhammad_alis_trade = {
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+
+	complete = {
+		in_default = no
+		has_law = law_type:law_protectionism
+		any_trade_route = {
+			is_trade_route_active = yes
+			count > 5
+		}
+	}
+
+	on_complete = {
+		custom_tooltip = je_muhammad_alis_advance
+		change_variable = {
+			name = egypt_reform_var
+			add = 1
+		}
+	}
+	fail = {
+		ruler = {
+			NOT = { has_culture = cu:albanian }
+		}
+	}
+	invalid = {
+		custom_tooltip = {
+			text = finished_egypt_reforms_tt
+			has_variable = muhammad_alis_reforms_complete
+		}
+	}
+	
+	transferable = no
+
+	weight = 5000
+}
+
+je_muhammad_alis_tax_farms = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	complete = {
+		has_law = law_type:law_tenant_farmers
+	}
+	
+	on_complete = {
+		custom_tooltip = je_muhammad_alis_advance
+		change_variable = {
+			name = egypt_reform_var
+			add = 1
+		}
+	}
+	fail = {
+		ruler = {
+			NOT = { has_culture = cu:albanian }
+		}
+	}
+	invalid = {
+		custom_tooltip = {
+			text = finished_egypt_reforms_tt
+			has_variable = muhammad_alis_reforms_complete
+		}
+	}
+	
+	transferable = no
+
+	weight = 5000
+}
+
+je_muhammad_alis_corvee = {
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	complete = {
+		has_law = law_type:law_corvee
+		radical_fraction = {
+			value <= 0.5
+		}
+	}
+	
+	on_complete = {
+		custom_tooltip = je_muhammad_alis_advance
+		change_variable = {
+			name = egypt_reform_var
+			add = 1
+		}
+	}
+
+	on_weekly_pulse = {
+		random_events = {
+			100 = 0
+			#10 = corvee_resistance.1 # resistance --
+			#10 = corvee_resistance.2 # resistance ------
+			#1 = corvee_resistance.3 # compliance ++
+		}
+	}
+
+	invalid = {
+		custom_tooltip = {
+			text = finished_egypt_reforms_tt
+			has_variable = muhammad_alis_reforms_complete
+		}
+	}
+	fail = {
+		ruler = {
+			NOT = { has_culture = cu:albanian }
+		}
+	}
+	
+	transferable = no
+
+	weight = 5000
+}
+
+je_muhammad_alis_medics = {
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+
+	complete = {
+		has_law = law_type:law_charitable_health_system
+		has_institution = institution_health_system
+		institution_investment_level = {
+			institution = institution_health_system
+			value > 1
+		}
+		any_scope_building = {
+			OR = {
+				is_building_type = building_barracks
+				is_building_type = building_conscription_center
+			}
+			has_active_production_method = pm_first_aid
+		}
+	}
+
+	on_complete = {
+		custom_tooltip = je_muhammad_alis_advance
+		change_variable = {
+			name = egypt_reform_var
+			add = 1
+		}
+	}
+	
+	invalid = {
+		custom_tooltip = {
+			text = finished_egypt_reforms_tt
+			has_variable = muhammad_alis_reforms_complete
+		}
+	}
+	fail = {
+		ruler = {
+			NOT = { has_culture = cu:albanian }
+		}
+	}
+	
+	transferable = no
+
+	weight = 5000
+}
+
+je_muhammad_alis_nahda = {
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	complete = {
+		literacy_rate >= 0.25
+		has_law = law_type:law_religious_schools
+		has_institution = institution_schools
+		institution_investment_level = {
+			institution = institution_schools
+			value > 1
+		}
+	}
+
+	on_complete = {
+		custom_tooltip = je_muhammad_alis_advance
+		change_variable = {
+			name = egypt_reform_var
+			add = 1
+		}
+	}
+	
+	invalid = {
+		custom_tooltip = {
+			text = finished_egypt_reforms_tt
+			has_variable = muhammad_alis_reforms_complete
+		}
+	}
+	fail = {
+		ruler = {
+			NOT = { has_culture = cu:albanian }
+		}
+	}
+	
+	transferable = no
+
+	weight = 5000
+}
