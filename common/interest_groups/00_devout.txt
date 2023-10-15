@@ -180,7 +180,7 @@
 					}
 					OR = {
 						country_has_state_religion = rel:sunni
-						country_has_state_region = rel:shiite
+						country_has_state_religion = rel:shiite
 					}
 				}
 			}

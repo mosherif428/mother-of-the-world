@@ -50,15 +50,193 @@ muhammad_alis_reform_events.1 = { # THE AGE OF REFORM
 	}
 }
 
+muhammad_alis_reform_events.2 = { # TRADE SUCCESS - THE WELL-TRODDEN PATH
+	type = country_event
+	placement = root
 
+	title = muhammad_alis_reform_events.2.t
+	desc = muhammad_alis_reform_events.2.d
+	flavor = muhammad_alis_reform_events.2.f
 
-muhammad_alis_reform_events.5 = { # SUCCESS - MODERN EGYPT
+	event_image = {
+		video = "unspecific_gears_pistons"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+
+	duration = 3
+
+	trigger = {
+		#triggered by je
+	}
+	immediate = {
+		add_modifier = {
+			name = egypt_trade_good
+			months = 120
+		}
+	}
+	option = {
+		name = muhammad_alis_reform_events.2.a
+		show_as_tooltip = {
+			add_modifier = {
+				name = egypt_trade_good
+				months = 120
+			}
+		}
+	}
+}
+
+muhammad_alis_reform_events.3 = { # TAX FARMS SUCCESS - MINDFUL OF HIS
+	type = country_event
+	placement = root
+
+	title = muhammad_alis_reform_events.3.t
+	desc = muhammad_alis_reform_events.3.d
+	flavor = muhammad_alis_reform_events.3.f
+
+	event_image = {
+		video = "africa_prosperous_farm"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		#triggered by je
+	}
+	immediate = {
+		add_modifier = {
+			name = egypt_taxes_good
+			months = 120
+		}
+	}
+	option = {
+		name = muhammad_alis_reform_events.3.a
+		show_as_tooltip = {
+			add_modifier = {
+				name = egypt_taxes_good
+				months = 120
+			}
+		}
+	}
+}
+
+muhammad_alis_reform_events.4 = { # CORVEE SUCCESS - 
+	type = country_event
+	placement = root
+
+	title = muhammad_alis_reform_events.4.t
+	desc = muhammad_alis_reform_events.4.d
+	flavor = muhammad_alis_reform_events.4.f
+
+	event_image = {
+		video = "unspecific_world_fair"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		#triggered by je
+	}
+	immediate = {
+		add_modifier = {
+			name = egypt_corvee
+			months = 120
+		}
+	}
+	option = {
+		name = muhammad_alis_reform_events.4.a
+		show_as_tooltip = {
+			add_modifier = {
+				name = egypt_corvee
+				months = 120
+			}
+		}
+	}
+}
+
+muhammad_alis_reform_events.5 = { # HAKIMAT SUCCESS - LITERATURE BOOM
 	type = country_event
 	placement = root
 
 	title = muhammad_alis_reform_events.5.t
 	desc = muhammad_alis_reform_events.5.d
 	flavor = muhammad_alis_reform_events.5.f
+
+	event_image = {
+		video = "unspecific_sick_in_hospital"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		#triggered by je
+	}
+	immediate = {
+		add_modifier = {
+			name = egypt_hakimat_good
+			months = 120
+		}
+	}
+	option = {
+		name = muhammad_alis_reform_events.5.a
+		show_as_tooltip = {
+			add_modifier = {
+				name = egypt_hakimat_good
+				months = 120
+			}
+		}
+	}
+}
+
+muhammad_alis_reform_events.6 = { # NAHDA SUCCESS - LITERATURE BOOM
+	type = country_event
+	placement = root
+
+	title = muhammad_alis_reform_events.6.t
+	desc = muhammad_alis_reform_events.6.d
+	flavor = muhammad_alis_reform_events.6.f
+
+	event_image = {
+		video = "middleeast_engineer_blueprint"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		#triggered by je
+	}
+	immediate = {
+		add_modifier = {
+			name = egypt_nahda_good
+			months = 120
+		}
+	}
+	option = {
+		name = muhammad_alis_reform_events.6.a
+		show_as_tooltip = {
+			add_modifier = {
+				name = egypt_nahda_good
+				months = 120
+			}
+		}
+	}
+}
+
+muhammad_alis_reform_events.7 = { # SUCCESS - MODERN EGYPT
+	type = country_event
+	placement = root
+
+	title = muhammad_alis_reform_events.7.t
+	desc = muhammad_alis_reform_events.7.d
+	flavor = muhammad_alis_reform_events.7.f
 
 	event_image = {
 		video = "europenorthamerica_london_center"
@@ -77,7 +255,7 @@ muhammad_alis_reform_events.5 = { # SUCCESS - MODERN EGYPT
 		}
 	}
 	option = {
-		name = muhammad_alis_reform_events.5.a
+		name = muhammad_alis_reform_events.7.a
 		show_as_tooltip = {
 			add_modifier = {
 				name = modern_egypt
@@ -86,16 +264,16 @@ muhammad_alis_reform_events.5 = { # SUCCESS - MODERN EGYPT
 	}
 }
 
-muhammad_alis_reform_events.6 = { # FAILURE - BACKWARDS EGYPT
+muhammad_alis_reform_events.8 = { # FAILURE - BACKWARDS EGYPT
 	type = country_event
 	placement = root
 
-	title = muhammad_alis_reform_events.6.t
-	desc = muhammad_alis_reform_events.6.d
-	flavor = muhammad_alis_reform_events.6.f
+	title = muhammad_alis_reform_events.8.t
+	desc = muhammad_alis_reform_events.8.d
+	flavor = muhammad_alis_reform_events.8.f
 
 	event_image = {
-		video = "europenorthamerica_london_center"
+		video = "unspecific_factory_closed"
 	}
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"

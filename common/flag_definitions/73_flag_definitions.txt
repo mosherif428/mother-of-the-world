@@ -41,6 +41,14 @@
 		}
 	}		
 	flag_definition = {
+		coa = EGY_subject_TUR
+		allow_overlord_canton = no		
+		priority = 50
+		trigger = { 
+			coa_def_turkegy_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
 		coa = EGY_communist
 		allow_overlord_canton = no
 		priority = 1500

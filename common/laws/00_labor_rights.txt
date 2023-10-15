@@ -8,7 +8,7 @@ law_corvee = {						# clerks, farmers, peasants, shopkeepers --> laborers
     progressiveness = 0
 
     modifier = {
-		country_construction_add = var:corvee_pops
+		country_construction_add = corvee_pops
 		state_radicals_from_sol_change_mult = 1.0
 		state_poor_standard_of_living_add = -2
 		state_middle_standard_of_living_add = -1

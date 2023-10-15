@@ -43,7 +43,8 @@ dismantle_ottomans = {
 		every_subject_or_below = {
 			make_independent = yes
 		}
-		custom_description = {
+	}
+		custom_tooltip = {
 			text = IRQ_created
 			create_country = {
 				tag = IRQ
@@ -54,7 +55,7 @@ dismantle_ottomans = {
 				state = s:STATE_MOSUL.region_state:TUR
 				on_created = {
 					save_scope_as = target
-					on_actions = { on_country_released_as_subject }
+					#on_actions = { on_country_released_as_subject }
 					c:EGY = {
 						create_diplomatic_pact = {
 							country = c:IRQ
@@ -64,7 +65,7 @@ dismantle_ottomans = {
 				}
 			}
 		}
-		custom_description = {
+		custom_tooltip = {
 			text = BUL_created
 			create_country = {
 				tag = BUL
@@ -75,11 +76,11 @@ dismantle_ottomans = {
 				state = s:STATE_DOBRUDJA.region_state:TUR
 				on_created = {
 					save_scope_as = target
-					on_actions = { on_country_released_as_independent }
+					#on_actions = { on_country_released_as_independent }
 				}
 			}
 		}
-		custom_description = {
+		custom_tooltip = {
 			text = ARM_created
 			create_country = {
 				tag = ARM
@@ -89,11 +90,11 @@ dismantle_ottomans = {
 				state = s:STATE_ERZURUM.region_state:TUR
 				on_created = {
 					save_scope_as = target
-					on_actions = { on_country_released_as_independent }
+					#on_actions = { on_country_released_as_independent }
 				}
 			}
 		}
-		custom_description = {
+		custom_tooltip = {
 			text = BOS_created
 			create_country = {
 				tag = BOS
@@ -101,11 +102,11 @@ dismantle_ottomans = {
 				state = s:STATE_BOSNIA.region_state:TUR
 				on_created = {
 					save_scope_as = target
-					on_actions = { on_country_released_as_independent }
+					#on_actions = { on_country_released_as_independent }
 				}
 			}
 		}
-		custom_description = {
+		custom_tooltip = {
 			text = ALB_created
 			create_country = {
 				tag = ALB
@@ -113,11 +114,10 @@ dismantle_ottomans = {
 				state = s:STATE_ALBANIA.region_state:TUR
 				on_created = {
 					save_scope_as = target
-					on_actions = { on_country_released_as_independent }
+					#on_actions = { on_country_released_as_independent }
 				}
 			}
 		}
-	}
 	s:STATE_MACEDONIA.region_state:TUR = {
 		set_state_owner = c:GRE
 	}

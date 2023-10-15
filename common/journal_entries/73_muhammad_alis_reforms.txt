@@ -12,7 +12,8 @@
 			name = muhammad_alis_reforms_complete
 		}
 		trigger_event = {
-			id = muhammad_alis_reform_events.5
+			id = muhammad_alis_reform_events.7
+			popup = yes
 		}
 	}
 
@@ -25,7 +26,8 @@
 			name = muhammad_alis_reforms_complete
 		}
 		trigger_event = {
-			id = muhammad_alis_reform_events.6
+			id = muhammad_alis_reform_events.8
+			popup = yes
 		}
 	}
 
@@ -65,6 +67,9 @@ je_muhammad_alis_trade = {
 			name = egypt_reform_var
 			add = 1
 		}
+		trigger_event = {
+			id = muhammad_alis_reform_events.2
+		}
 	}
 	fail = {
 		ruler = {
@@ -77,8 +82,6 @@ je_muhammad_alis_trade = {
 			has_variable = muhammad_alis_reforms_complete
 		}
 	}
-	
-	transferable = no
 
 	weight = 5000
 }
@@ -96,6 +99,9 @@ je_muhammad_alis_tax_farms = {
 			name = egypt_reform_var
 			add = 1
 		}
+		trigger_event = {
+			id = muhammad_alis_reform_events.3
+		}
 	}
 	fail = {
 		ruler = {
@@ -108,8 +114,6 @@ je_muhammad_alis_tax_farms = {
 			has_variable = muhammad_alis_reforms_complete
 		}
 	}
-	
-	transferable = no
 
 	weight = 5000
 }
@@ -129,6 +133,9 @@ je_muhammad_alis_corvee = {
 		change_variable = {
 			name = egypt_reform_var
 			add = 1
+		}
+		trigger_event = {
+			id = muhammad_alis_reform_events.4
 		}
 	}
 
@@ -152,8 +159,6 @@ je_muhammad_alis_corvee = {
 			NOT = { has_culture = cu:albanian }
 		}
 	}
-	
-	transferable = no
 
 	weight = 5000
 }
@@ -183,6 +188,9 @@ je_muhammad_alis_medics = {
 			name = egypt_reform_var
 			add = 1
 		}
+		trigger_event = {
+			id = muhammad_alis_reform_events.5
+		}
 	}
 	
 	invalid = {
@@ -196,8 +204,6 @@ je_muhammad_alis_medics = {
 			NOT = { has_culture = cu:albanian }
 		}
 	}
-	
-	transferable = no
 
 	weight = 5000
 }
@@ -221,6 +227,9 @@ je_muhammad_alis_nahda = {
 			name = egypt_reform_var
 			add = 1
 		}
+		trigger_event = {
+			id = muhammad_alis_reform_events.6
+		}
 	}
 	
 	invalid = {
@@ -234,8 +243,6 @@ je_muhammad_alis_nahda = {
 			NOT = { has_culture = cu:albanian }
 		}
 	}
-	
-	transferable = no
 
 	weight = 5000
 }

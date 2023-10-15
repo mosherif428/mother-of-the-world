@@ -959,7 +959,8 @@ oriental_crisis.10 = { # WIN - CONVENTION OF NICOSIA
 				target_is = c:EGY
 				is_war = yes
 			}
-			resolve_play_for = c:EGY
+			#resolve_play_for = c:EGY
+			end_play = yes
 		}
 		set_global_variable = khedive_recognized
 		c:EGY = {
@@ -993,15 +994,15 @@ oriental_crisis.10 = { # WIN - CONVENTION OF NICOSIA
 		name = oriental_crisis.10.b
 		trigger = {
 			always = yes
-			NOT = { has_global_variable = strictly_historical_motw }
-			any_scope_war = {
-				is_war_participant = c:TUR
-				is_war_participant = c:EGY
-				has_war_support = { 
-					target = c:TUR
-					value <= 0
-				}
-			}
+			#NOT = { has_global_variable = strictly_historical_motw }
+			#any_scope_war = {
+			#	is_war_participant = c:TUR
+			#	is_war_participant = c:EGY
+			#	has_war_support = { 
+			#		target = c:TUR
+			#		value <= 0
+			#	}
+			#}
 		}
 		every_diplomatic_play = {
 			limit = {
@@ -1009,7 +1010,8 @@ oriental_crisis.10 = { # WIN - CONVENTION OF NICOSIA
 				target_is = c:EGY
 				is_war = yes
 			}
-			resolve_play_for = c:EGY
+			#resolve_play_for = c:EGY
+			end_play = yes
 		}
 		c:EGY = {
 			change_infamy = 40
@@ -1258,6 +1260,27 @@ oriental_crisis.12 = { # COMPLETE DEFEAT -
 		c:GBR = {
 			save_scope_as = great_britain
 		}
+		s:STATE_ADANA.region_state:EGY = {
+			save_scope_as = adana
+		}
+		s:STATE_ALEPPO.region_state:EGY = {
+			save_scope_as = aleppo
+		}
+		s:STATE_SYRIA.region_state:EGY = {
+			save_scope_as = syria
+		}
+		s:STATE_LEBANON.region_state:EGY = {
+			save_scope_as = lebanon
+		}
+		s:STATE_CRETE.region_state:EGY = {
+			save_scope_as = crete
+		}
+		s:STATE_TRANSJORDAN.region_state:EGY = {
+			save_scope_as = transjordan
+		}
+		s:STATE_PALESTINE.region_state:EGY = {
+			save_scope_as = palestine
+		}
 	}
 	option = { # CONVENTION TERMS ENFORCED
 		name = oriental_crisis.12.a
@@ -1315,7 +1338,7 @@ oriental_crisis.12 = { # COMPLETE DEFEAT -
 			text = convention_of_london_tt5
 			c:EGY = {
 				heir = { disinherit_character = yes }
-				ruler = { kill_character = yes }
+				#ruler = { kill_character = yes }
 				create_character = {
 					first_name = Isset
 					last_name = Pasha

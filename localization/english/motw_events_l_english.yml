@@ -1,6 +1,6 @@
 ﻿l_english:
  motw_meta_events.1.t:0 "Mother of the World"
- motw_meta_events.1.d:0 "Hellbent on perfecting the wording of the next decree, you look up for the first time in hours to see an uncanny figure brushing aside the curtains to your office. You can't find your words. You want to command this fiend to reveal his identity, or how he found you, but you can't. Your mouth remains shut."
+ motw_meta_events.1.d:0 "An uncanny figure brushing aside the curtains to your office. You can't find your words. You want to command this fiend to reveal his identity, or how he found you, but you can't. Your mouth remains shut."
  motw_meta_events.1.f:0 ""Relax, Pasha. No need to worry. This is the only time you'll see me in a hundred years."\nThe figure continues, "You have the will of the whole [ROOT.GetCountry.GetAdjectiveNoFlag] nation at your feet. How that came to be is none of my concern. All I need you to do is decide the future of this nation. Your choice is permanent so long as you're in this universe. So, choose wisely.""
  motw_intro_tooltip:0 "You have enabled the Mother of the World mod. This expansion mod focuses mainly on Egypt and her friends and enemies. Additionally, the mod contains content relevant to Egypt for the British Empire, France, as well as the Ottoman Empire."
  motw_meta_events.1.a:0 "Strictly Historical - #P Recommended#!"
@@ -39,11 +39,19 @@
  muhammad_alis_reform_events.1.f:1 ""If the Land is parched, we quench it with our blood!""
  muhammad_alis_reform_events.1.a:0 "All aboard the train of civilization!"
 
- muhammad_alis_reform_events.5.t:0 "Modern Egypt"
- muhammad_alis_reform_events.5.d:0 "Gears are turning, and heads are lifting. While [ROOT.GetCountry.GetName] might not be the pioneering nation she once was, It is certain beyond all doubts that, now, she walks among the elites."
- muhammad_alis_reform_events.5.f:0 ""If I weren't Egyptian, I would've wanted to be Egyptian." - Mustafa Kamel"
+ muhammad_alis_reform_events.2.t:0 "The Well-trodden Path"
+ muhammad_alis_reform_events.2.d:0 "[ROOT.GetCountry.GetName]'s unique geographical position puts her at the meeting point of the east and the west."
+
+ muhammad_alis_reform_events.7.t:0 "Modern Egypt"
+ muhammad_alis_reform_events.7.d:0 "Gears are turning, and heads are lifting. While [ROOT.GetCountry.GetName] might not be the pioneering nation she once was, It is certain beyond all doubts that, now, she walks among the elites."
+ muhammad_alis_reform_events.7.f:0 ""If I weren't Egyptian, I would've wanted to be Egyptian." - Mustafa Kamel"
  modern_egypt_tt:0 ""
- muhammad_alis_reform_events.5.a:0 "Onwards and Upwards!"
+ muhammad_alis_reform_events.7.a:0 "Onwards and Upwards!"
+
+ muhammad_alis_reform_events.8.t:0 "Backwards Egypt"
+ muhammad_alis_reform_events.8.d:0 "Gears lay rusting in sheds. What we began, we could not complete. [ROOT.GetCountry.GetNameNoFlag]has once again found itself at the tail end of civilization."
+ muhammad_alis_reform_events.8.f:0 ""
+ muhammad_alis_reform_events.8.a:0 "Curses!"
 
  ############################################# ORIENTAL CRISIS 0F 1840 ##############################################################
  oriental_crisis.1.t:0 "Memories of Kütahya"
@@ -103,7 +111,7 @@
  oriental_crisis.8.d1:0 "Lord Palmerston, Foreign Secretary of [SCOPE.sCountry('great_britain').GetName] gathered officials and diplomats from other [Concept('concept_great_power','$concept_great_powers$')], namely [SCOPE.sCountry('austria').GetName], [SCOPE.sCountry('prussia').GetName] and [SCOPE.sCountry('russia').GetName] in London, to write up an infuriating ultimatum! Our only hope now is [SCOPE.sCountry('france').GetName]. They haven't been invited to that mockery of a convention."
  oriental_crisis.8.d2:0 "Monsieur Adolphe Thiers, Foreign Secretary of [SCOPE.sCountry('france').GetName] gathered officials and diplomats from other [Concept('concept_great_power','$concept_great_powers$')], namely [SCOPE.sCountry('austria').GetName], [SCOPE.sCountry('prussia').GetName] and [SCOPE.sCountry('russia').GetName] in Paris, to write up an infuriating ultimatum! Our only hope now is [SCOPE.sCountry('great_britain').GetName]. They haven't been invited to that mockery of a convention."
  oriental_crisis.8.f:0 ""His Highness promises to grant to M. Ali, for himself and his descendants in direct line, the administration of the Pashalic of Egypt, and the title of Pasha of Acre, the administration of the southern part of Syria. Nevertheless, the Sultan, in making these offers, attaches thereto the condition that M. Ali accept them within ten days after they shall have been communicated to him at Alexandria, by an agent of His Highness, and that M. Ali at the same time deliver into the hands of such agent the necessary instructions to the commanders of his land and sea forces to withdraw immediately from Arabia, and from all the holy cities therein situated, from the island of Candia, from the district of Adana, and from all the other parts of the Ottoman Empire that are not included in the limits of Egypt, and in those of the Pashalic of Acre""
- oriental_crisis.8.a:0 "We #S Refuse #!!"
+ oriental_crisis.8.a:0 "We #high;bold Refuse #!!"
  convention_of_london_tt1:0 "The more we delay acceptance, the less favourable the treaty becomes.\nOn accepting this ultimatum, we will:"
  convention_of_london_tt2:0 "Return the states of [SCOPE.sState('adana').GetName], [SCOPE.sState('aleppo').GetName], [SCOPE.sState('syria').GetName], [SCOPE.sState('lebanon').GetName], [SCOPE.sState('transjordan').GetName] and [SCOPE.sState('crete').GetName] to the [SCOPE.sCountry('ottoman_empire').GetName]."
  convention_of_london_tt3:0 "Transfer the [concept_tributary] of [SCOPE.sCountry('hedjaz').GetName] to the [SCOPE.sCountry('ottoman_empire').GetName]"

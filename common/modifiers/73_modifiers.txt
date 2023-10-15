@@ -22,9 +22,7 @@ preferred_egypt = {
 }
 preparing_for_war = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
-	battle_army_offense = 0.5
-	battle_army_average_kill_rate = 0.2
-	battle_average_provinces_captured = 0.2
+	# let's wait for 1.5
 }
 defected_ottoman_fleet = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
@@ -35,11 +33,11 @@ treacherous_fleet = {
 	state_building_naval_base_max_level_add = -50
 }
 plot_armor = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_portrait_positive.dds
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
 	character_health_add = 10000
 }
 unstable_rule = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_portrait_negative.dds
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
 	country_authority_add = -100
 	country_legitimacy_headofstate_add = -10
 }
@@ -56,4 +54,24 @@ backwards_egypt = {
 	country_weekly_innovation_mult = -0.25
 	country_tech_spread_mult = -0.05
 	country_production_tech_research_speed_mult = -0.25
+}
+egypt_trade_good = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	country_trade_route_competitiveness_mult = 0.5
+}
+egypt_taxes_good = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	
+}
+egypt_corvee = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	
+}
+egypt_hakimat_good = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_positive.dds
+	
+}
+egypt_nahda_good = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	
 }

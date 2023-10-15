@@ -2,12 +2,17 @@
  law_corvee:0 "Corvée"
  law_corvee_desc:0 "A form of intermittent, forced, unpaid labor, that is most often presented as a peasant's duty to the nation. It is often utilized on large construction projects requiring excessive manpower, usually plucked from the unemployed poor and middle strata. As a result, radicalism and popular outrage is guaranteed."
 
+ ig_al_azhar:0 "Al Azhar"
+ ig_foreign_influence:0 "Foreign Influence"
+ ig_british_influence:0 "British Influence"
+ ig_french_influence:0 "French Influence"
+
  DISMANTLE_OTTOMANS:0 "The [SCOPE.sCountry('ottoman_empire').GetName] will be #N dismantled #!!"
  DISMANTLE_OTTOMANS_NEG:0 ""
- dismantle_bad:0 "#color:red;bold Dismantling one of the [Concept('concept_great_power','$concept_great_powers$')] will have dire consequences! #!"
+ dismantle_bad:0 "#X Dismantling one of the [Concept('concept_great_power','$concept_great_powers$')] will have dire consequences! #!"
  IRQ_created:0 "#high;bold Iraq #! will be created."
  BUL_created:0 "#high;bold Bulgaria #! will be created."
- BUL_created:0 "#high;bold Armenia #! will be created."
+ ARM_created:0 "#high;bold Armenia #! will be created."
  BOS_created:0 "#high;bold Bosnia-Herzegovina #! will be created."
  ALB_created:0 "#high;bold Albania #! will be created."
 

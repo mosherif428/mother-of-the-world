@@ -11,8 +11,9 @@
 	}
 
 	enable = {
+		always = no
 		#AND = {
-			c:EGY ?= this
+		#	c:EGY ?= this
 		#	has_variable = foreign_influence_enabled
 		#}
 	}

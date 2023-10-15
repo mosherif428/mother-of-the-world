@@ -32,6 +32,22 @@ EGY_subject_GBR = {
 	}
 }
 
+EGY_subject_TUR = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	color2 = "white"
+	colored_emblem = {
+		texture = "ce_crescent_large.dds"
+		color1 = "white"
+		instance = { scale = { 0.66 0.7 } position = { 0.48 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_star_05_tilted.dds"
+		color1 = "white"
+		instance = { scale = { 0.2 0.2 } position = { 0.56 0.5 } }
+	}
+}
+
 EGY_communist = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"

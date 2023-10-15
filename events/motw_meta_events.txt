@@ -9,7 +9,9 @@ motw_meta_events.1 = {
 	flavor = motw_meta_events.1.f
 
 	event_image = {
-		texture = ""
+		texture = "gfx/event_pictures/Muhammad_Ali.dds"
+		#video = "gfx/event_pictures/MuhammadAli.bk2"
+		#video = "MuhammadAli"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -19,9 +21,7 @@ motw_meta_events.1 = {
 	duration = 1
 
 	trigger = {
-		OR = {
-			c:EGY ?= ROOT
-		}
+		c:EGY ?= ROOT
 		NOR = {
 			has_global_variable = strictly_historical_motw
 			has_global_variable = historical_motw
@@ -29,19 +29,7 @@ motw_meta_events.1 = {
 		}
 	}
 	immediate = {
-		ruler = {
-			add_modifier = {
-				name = plot_armor
-				months = 144
-			}
-		}
-		heir = {
-			add_modifier = {
-				name = plot_armor
-				months = 144
-			}
-		}
-
+		
 	}
 	option = {
 		name = motw_meta_events.1.a
@@ -50,6 +38,18 @@ motw_meta_events.1 = {
 		hidden_effect = {
 			set_global_variable = {
 				name = strictly_historical_motw
+			}
+			ruler = {
+				add_modifier = {
+					name = plot_armor
+					months = 144
+				}
+			}
+			heir = {
+				add_modifier = {
+					name = plot_armor
+					months = 144
+				}
 			}
 		}
 	}
@@ -60,6 +60,18 @@ motw_meta_events.1 = {
 			set_global_variable = {
 				name = historical_motw
 			}
+			ruler = {
+				add_modifier = {
+					name = plot_armor
+					months = 144
+				}
+			}
+			heir = {
+				add_modifier = {
+					name = plot_armor
+					months = 144
+				}
+			}
 		}
 	}
 	option = {
@@ -68,6 +80,18 @@ motw_meta_events.1 = {
 		hidden_effect = {
 			set_global_variable = {
 				name = loosely_historical_motw
+			}
+			ruler = {
+				add_modifier = {
+					name = plot_armor
+					months = 144
+				}
+			}
+			heir = {
+				add_modifier = {
+					name = plot_armor
+					months = 144
+				}
 			}
 		}
 	}
