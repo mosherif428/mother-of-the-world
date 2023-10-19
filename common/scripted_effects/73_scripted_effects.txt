@@ -1,7 +1,7 @@
 ﻿corvee_enabled = {
 	set_variable = {
-		name = corvee_pops
-		value = 0
+		name = corvee_pops_var
+		value = corvee_pops
 	}
 	every_scope_state = {
 		limit = {
@@ -25,10 +25,10 @@
 				}
 			}
 			change_poptype = pop_type:laborers
-			change_variable = {
-				name = corvee_pops
-				add = 10
-			}
+			#change_variable = {
+			#	name = corvee_pops
+			#	add = 10
+			#}
 			set_pop_qualifications = {
 				pop_type = laborers
 				qualifications = 0.75

@@ -1,0 +1,40 @@
+﻿corvee_pops = {
+	value = 0
+
+	if = {
+		limit = {
+			NOT = { has_law = law_type:law_corvee }
+		}
+		every_scope_pop = {
+			limit = {
+				OR = {
+					is_pop_type = peasants
+					is_pop_type = farmers
+					is_pop_type = clerks
+					is_pop_type = shopkeepers
+				}
+				OR = {
+					is_employed = no
+					pop_employment_building_group = bg_subsistence_agriculture
+				}
+				this.culture = {
+					is_primary_culture_of = ROOT
+				}
+			}
+			add = 10
+		}
+	}
+	else_if = {
+		limit = {
+			has_variable = corvee_enacted
+		}
+		every_scope_pop = {
+			limit = {
+				is_pop_type = laborers
+				is_employed = yes
+				pop_employment_building_group = bg_construction
+			}
+			add = 10
+		}
+	}
+}

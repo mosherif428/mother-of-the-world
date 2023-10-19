@@ -40,12 +40,33 @@
  muhammad_alis_reform_events.1.a:0 "All aboard the train of civilization!"
 
  muhammad_alis_reform_events.2.t:0 "The Well-trodden Path"
- muhammad_alis_reform_events.2.d:0 "[ROOT.GetCountry.GetName]'s unique geographical position puts her at the meeting point of the east and the west."
+ muhammad_alis_reform_events.2.d:0 "[ROOT.GetCountry.GetName]'s unique geographical position puts her at the meeting point of the east and the west. Whoever rules this land, holds the reins of world trade. Tightening our grip on these reins will ensure making more gains."
+ muhammad_alis_reform_events.2.f:0 "The only stop on the road to India."
+ muhammad_alis_reform_events.2.a:0 "Enact the monopoly!"
+
+ muhammad_alis_reform_events.3.t:0 "And Gives to the Poor"
+ muhammad_alis_reform_events.3.d:0 "[GetPlayer.GetRuler.GetFirstName] put an end to the secondary powers of [ROOT.GetCountry.GetName], in the form of Mamluks. But there remained another form of decentralized power in the hands of land owners. Meanwhile, [ROOT.GetCountry.GetAdjectiveNoFlag] coffers were noticeably empty..."
+ muhammad_alis_reform_events.3.f:0 ""
+ muhammad_alis_reform_events.3.a:0 "The [GetInterestGroupVariant('ig_landowners',GetPlayer).GetNameWithCountryVariant] are no more."
+
+ muhammad_alis_reform_events.4.t:0 "By All Means Possible"
+ muhammad_alis_reform_events.4.d:0 "[ROOT.GetCountry.GetName] must be built up one way or another. While we are not proud of forcing our men out of their farms and into construction sites, this has and will help the country along the path to greatness."
+ muhammad_alis_reform_events.4.f:0 "Who's to say no to the whip?"
+ muhammad_alis_reform_events.4.a:0 "Evil but necessary."
+
+ muhammad_alis_reform_events.5.t:0 "Heal Me, O Wise One"
+ muhammad_alis_reform_events.5.d:0 "If all the men are soldiers and builders, who remains to treat the sick and elderly? [GetPlayer.GetRuler.GetFirstName] sent for a British envoy of doctors and medics to educate groups of women on the basics of medicine."
+ muhammad_alis_reform_events.5.f:0 "A Hakima, literally a 'wise woman', is a woman well-educated in the art of medicine and surgery."
+ muhammad_alis_reform_events.5.a:0 "Blessed are the Angels of Mercy."
+
+ muhammad_alis_reform_events.6.t:0 "ًWith Parchment and Pen"
+ muhammad_alis_reform_events.6.d:0 "These decades are witnessing a noticeable rise in literacy and a golden age of Arabic literature. Of course, this literary rennaisance would not have happened without our excellent policies and laws."
+ muhammad_alis_reform_events.6.f:0 ""
+ muhammad_alis_reform_events.6.a:0 "The Enlightened walk among us."
 
  muhammad_alis_reform_events.7.t:0 "Modern Egypt"
  muhammad_alis_reform_events.7.d:0 "Gears are turning, and heads are lifting. While [ROOT.GetCountry.GetName] might not be the pioneering nation she once was, It is certain beyond all doubts that, now, she walks among the elites."
  muhammad_alis_reform_events.7.f:0 ""If I weren't Egyptian, I would've wanted to be Egyptian." - Mustafa Kamel"
- modern_egypt_tt:0 ""
  muhammad_alis_reform_events.7.a:0 "Onwards and Upwards!"
 
  muhammad_alis_reform_events.8.t:0 "Backwards Egypt"
@@ -55,10 +76,10 @@
 
  ############################################# ORIENTAL CRISIS 0F 1840 ##############################################################
  oriental_crisis.1.t:0 "Memories of Kütahya"
- oriental_crisis.1.d:0 "Frustration marked the memory of that cursed day. After decisive victory on the battlefield, [GetPlayer.GetRuler.GetFullName] failed to secure his kingdom's de jure independence. Now, the air smells of smoke and gunpowder. Danger is brewing, and war is surely soon."
+ oriental_crisis.1.d:0 "Frustration marked the memory of that cursed day. After decisive victory on the battlefield, [GetPlayer.GetRuler.GetFirstName] failed to secure his kingdom's de jure independence. Now, the air smells of smoke and gunpowder. Danger is brewing, and war is surely soon."
  oriental_crisis.1.f:0 "And I saw, and behold a white horse, and he that sat on him had a bow; and a crown was given unto him, and he went forth conquering, and to conquer."
  oriental_crisis.1.a:0 "The dust hasn't settled quite yet."
- oriental_crisis_egy_tt:0 "In a few months time, the Ottomans might cause a [concept_diplomatic_incident] for Syria."
+ oriental_crisis_egy_tt:0 "In a few months time, the Ottomans will cause a [concept_diplomatic_incident] for Syria."
 
  oriental_crisis.2.t:0 "Tugwar"
  oriental_crisis.2.d:0 "The [SCOPE.sCountry('ottoman_empire').GetAdjectiveNoFlag]s have taken the initiative and begun mobilizing near [SCOPE.sState('STATE_ADANA').GetName]. We must make a move!"

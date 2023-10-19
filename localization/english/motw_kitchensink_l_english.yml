@@ -16,6 +16,8 @@
  BOS_created:0 "#high;bold Bosnia-Herzegovina #! will be created."
  ALB_created:0 "#high;bold Albania #! will be created."
 
+ POP_FORCED_LABOR:0 "Forced Labor"
+
  the_citadel_massacre:0 "The Massacre of the Mamluks"
  abandoned_cruel_ways:0 "Abandoned Cruel Ways"
  eyes_on_the_imperial_seat:0 "Eyes on the Imperial Seat"
@@ -29,3 +31,8 @@
  unstable_rule:0 "Unstable Rule"
  modern_egypt:0 "Modern Egypt"
  backwards_egypt:0 "Backwards Egypt"
+ egypt_trade_good:0 "Efficient Trade"
+ egypt_taxes_good:0 "Tax Farms"
+ egypt_corvee:0 "Corvée"
+ egypt_hakimat_good:0 "Hakimat Nurses"
+ egypt_nahda_good:0 "Nahda Rennaisance"

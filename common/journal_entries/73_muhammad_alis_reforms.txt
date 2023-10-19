@@ -8,6 +8,9 @@
 	}
 
 	on_complete ={
+		add_modifier = {
+			name = modern_egypt
+		}
 		set_variable = {
 			name = muhammad_alis_reforms_complete
 		}
@@ -140,6 +143,12 @@ je_muhammad_alis_corvee = {
 	}
 
 	on_weekly_pulse = {
+		effect = {
+			change_variable = {
+				name = corvee_pops_var
+				add = corvee_pops
+			}
+		}
 		random_events = {
 			100 = 0
 			#10 = corvee_resistance.1 # resistance --

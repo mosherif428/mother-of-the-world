@@ -82,7 +82,6 @@ motw_intro_events.2 = { # SUBLIME ENVY FOR THE SUBLIME PORTE
 
 	option = { # IBRAHIM WAS RIGHT
 		name = motw_intro_events.2.a
-		custom_tooltip = motw_intro_events.2.a.tt
 		add_modifier = { # +1 max declared interests & temporary claim on constantinople
 			name = eyes_on_the_imperial_seat
 			months = long_modifier_time
@@ -93,7 +92,7 @@ motw_intro_events.2 = { # SUBLIME ENVY FOR THE SUBLIME PORTE
 		hidden_effect = {
 			trigger_event = {
 				id = motw_intro_events.3
-				months = normal_modifier_time
+				months = 144
 			}
 		}
 	}

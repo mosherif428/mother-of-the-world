@@ -10,8 +10,6 @@ motw_meta_events.1 = {
 
 	event_image = {
 		texture = "gfx/event_pictures/Muhammad_Ali.dds"
-		#video = "gfx/event_pictures/MuhammadAli.bk2"
-		#video = "MuhammadAli"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"

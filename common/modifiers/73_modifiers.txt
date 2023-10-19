@@ -58,20 +58,32 @@ backwards_egypt = {
 egypt_trade_good = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
 	country_trade_route_competitiveness_mult = 0.5
+	country_trade_route_cost_mult = -0.20
+	market_land_trade_capacity_add = 5
+	tariff_import_add = 0.25
+	tariff_export_add = 0.25
 }
 egypt_taxes_good = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
-	
+	interest_group_ig_landowners_pol_str_mult = -0.75
+	interest_group_ig_landowners_approval_add = -20
+	interest_group_ig_rural_folk_pol_str_mult = 0.25
+	interest_group_ig_rural_folk_approval_add = 10
+	tax_land_add = 5
 }
 egypt_corvee = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	
+	state_building_construction_sector_max_level_add = 10
+	state_construction_mult = 0.5
+	building_construction_sector_throughput_mult = 0.75
+	building_group_bg_construction_laborers_mortality_mult = 0.25
 }
 egypt_hakimat_good = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_positive.dds
-	
+	state_mortality_mult = -0.15
 }
 egypt_nahda_good = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
-	
+	country_voting_power_from_literacy_add = 10
+	state_expected_sol_from_literacy = 1
 }

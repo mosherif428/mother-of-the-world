@@ -86,7 +86,7 @@ muhammad_alis_reform_events.2 = { # TRADE SUCCESS - THE WELL-TRODDEN PATH
 	}
 }
 
-muhammad_alis_reform_events.3 = { # TAX FARMS SUCCESS - MINDFUL OF HIS
+muhammad_alis_reform_events.3 = { # TAX FARMS SUCCESS - MINDFUL OF HIS PEOPLE
 	type = country_event
 	placement = root
 
